@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Items</title>
+    </head>
+</html>
+<body>
+    <h1>Items</h1>
+
+    <table>
+        <tr>
+            <th><input type="checkbox"></th>
+            <th>Title</th>
+            <th>added</th>
+            <th>tags</th>
+        </tr>
+        {% for item in items.values() %}
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>{{ item.resolved_title }}</td>
+                <td>{{ item.time_added }}</td>
+                <td>{{ item.tags }}</td>
+            </tr>
+        {% endfor %}
+</body>
+</html>
